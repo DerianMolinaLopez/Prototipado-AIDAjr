@@ -5,7 +5,7 @@
 - La seguda parte consta de las interfaces del producto en si
  Como la red transformer para este proyecot tarda timepo, solamente sera un diseño prototipado
 
-## Requisitos previos para la instaalcion del proyeto
+## Requisitos previos para la instalcion del proyeto
 - Tener git instalado y configurado con tus cuentas y nombre de usuario
 - Si se puede teenr vs code pero con un IDE u otro editor no debe haber problema
 - Tener instalaco nodejs, este proyecto esta usando  la version 20.10.0 (Por si hay algun problema con dependencias pero lo dudo mucho
