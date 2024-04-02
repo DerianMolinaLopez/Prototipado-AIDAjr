@@ -5,3 +5,16 @@
 .fondo-redondeado{
     border-radius: 10px 5px 0px 40px;
 }
+/*
+globales para manejar el zoom de la pagina
+
+*/
+html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+   
+  }

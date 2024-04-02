@@ -13,6 +13,7 @@ export default {
         'verde-bajo':'#4FAA52',
         'verde-muy-bajo':'#88D68A',
          //variaciones del azul
+         'azul-logo':'#4E64AB',
          'azul-word':'#1D4287',
         'azul-fuerte-medio':'#3937FF',
         'azul-medio':'#4654F0',
