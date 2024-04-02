@@ -7,15 +7,15 @@ const Main = () => {
     <main>
       <section className='space-y-10 my-10' >{/*nosotros */}
       <h2 className='text-center text-5xl font-black    '>¿Quienes somos?</h2>
-      <div className='bg-azul-fuerte-medio'>
+      <div className='bg-azul-word'>
             <Nosotros/>
       </div>
       <h2 className='text-center text-5xl font-black    '>¿Que es lo que pretendemos?</h2>{/*mision*/}
-      <div className='bg-verde-fuerte-reducido'>
+      <div className='bg-verde-excel'>
         <Mision/>
       </div>
       <h2 className='text-center text-5xl font-black    '>Nuestra vision para el futuro</h2>
-      <div className='bg-naranja'>{/*visison */}
+      <div className='bg-power-point'>{/*visison */}
             <Nosotros/>
       </div>
       
