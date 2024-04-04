@@ -22,4 +22,16 @@ html, body {
     width: 90%;
     max-width: 88rem;
   }
-
+  .altura-robot{
+    height: 50rem;
+  }
+  .posicionamiento{
+   
+    top: 27.5rem;
+    left: 15.5rem;
+  }
+  .sombra{
+    box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);
+  }

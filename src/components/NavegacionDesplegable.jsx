@@ -1,6 +1,6 @@
 import React from 'react'
-import { useState } from 'react'
 
+import { Link } from 'react-router-dom'
 const NavegacionDesplegable = ({isVisible,setVisible}) => {
 
 
@@ -12,6 +12,11 @@ const NavegacionDesplegable = ({isVisible,setVisible}) => {
         <span className="self-center text-2xl font-bold whitespace-nowrap dark:text-white">AIDA jr</span>
     </a>
     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+         <Link to="/AIDAjr-modelo" className=' font-bold text-white mr-5 my-auto'>
+          <span className='hover:underline transition-all duration-150 '>
+            Intentar AIDAjr
+          </span>
+         </Link>
         <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Iniciar</button>
         <button 
             onClick={() => setVisible(!isVisible)}
