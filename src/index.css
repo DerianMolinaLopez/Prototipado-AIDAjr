@@ -18,3 +18,7 @@ html, body {
     justify-content: center;
    
   }
+  .ancho{
+    width: 90%;
+    max-width: 88rem;
+  }
