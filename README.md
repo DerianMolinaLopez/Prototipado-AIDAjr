@@ -1,7 +1,7 @@
 # AIDAjr
 # repositorio para los diseños conceptuales para la interaccion del usuario
 # El proyecto consta de 2 partes:
-- la primera que seria una leanding page para la presnetacion del producto
+- la primera que seria una leanding page para la presentacion del producto
 - La seguda parte consta de las interfaces del producto en si
  Como la red transformer para este proyecot tarda timepo, solamente sera un diseño prototipado
 
