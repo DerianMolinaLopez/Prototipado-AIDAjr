@@ -2,7 +2,8 @@ import React from 'react'
 
 const Header = () => {
   return (
-    <header className='bg-azul-medio grid grid-cols-6 h-24 rounded-md fixed ancho'>
+    <header className='bg-azul-medio grid-wra grid grid-cols-6 
+                       h-24 rounded-md fixed ancho'>
         <picture className='relative col-start-1'>
                     <img className='w-24 h-24 flex absolute left-20' 
                                 src="/src/img/logooAIDA.png" alt="" />
