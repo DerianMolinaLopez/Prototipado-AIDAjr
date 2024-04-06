@@ -30,6 +30,10 @@ html, body {
     top: 27.5rem;
     left: 15.5rem;
   }
+  .largo{
+    max-width: 90rem;
+    width: 90rem;
+  }
   .sombra{
     box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);
 -webkit-box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);

@@ -7,14 +7,14 @@ function App() {
 //?FUENTE DE ROBOTS Bauhaus 95
 const [isVisible,setVisible] = useState(false)
   return (
-    <>
+    <div className="w-11/12">
       {/*<Header />*/}
       <NavegacionDesplegable isVisible={isVisible}
                              setVisible={setVisible}/>
       {isVisible && <MenuDesplegable/>}
       <Main/>
       
-    </>
+    </div>
   )
 }
 
