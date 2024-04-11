@@ -5,8 +5,8 @@ import Planes from './Planes'
 const Main = () => {
 
   return (
-    <main className='mt-28'>
-      <h2 className='text-center text-5xl font-black    '>Planes de pago accesibles a la palma de tu mano para tus necesiades</h2>
+    <main className='mt-32'>
+      <h2 className='text-center text-5xl font-black '>Planes de uso y licencias a la palma de tu mano</h2>
       <section className='lg:grid lg:grid-cols-3 md:flex  md:flex-col mt-10 gap-5 '>
         <Planes/>
       </section>
