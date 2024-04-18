@@ -24,6 +24,8 @@ export default {
         'amarillo':'#F0D906',
         'naranja-amarillado':'#FFAE12',
         //colores auxiliares
+        'oscuro':'#222',
+        'oscuro-rebajado':'#292929'
        
 
     }),

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import MoldeVista from '../MoldeVista'
 const PaginaExcel = () => {
   return (
-    <div>
-      <h1>Hola desde eXCEL</h1>
+    <div className='largo'>
+      <MoldeVista/>
     </div>
   )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
-
+import MoldeVista from '../MoldeVista'
 const PaginaPower = () => {
   return (
-    <div>
-      <h1>Hola desde power</h1>
+    <div className='largo'>
+      <MoldeVista/>
     </div>
   )
 }
