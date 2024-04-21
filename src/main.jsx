@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import Inicio from './components/pages/InicioCursos/Inicio.jsx'
 import PaginaExcel from './components/pages/PaginaExcel.jsx'
 import PaginaPower from './components/pages/PaginaPower.jsx'
 import PaginaWord from './components/pages/PaginaWord.jsx'
@@ -30,6 +31,10 @@ const router  = createBrowserRouter([
   {
     path: '/AIDAjr-modelo/power',
     element:<PaginaPower/>
+  },
+  {
+    path: '/AIDA-CURSOS',
+    element:<Inicio/>
   },
 
 ])

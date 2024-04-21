@@ -44,8 +44,13 @@ const MoldeVista = () => {
   return (
     <div className='h-screen flex justify-center p-5'>
       <form onSubmit={e => hansleSubmit(e)} className={`w-2/3 border-4 ${colorLocal} bg-green rounded-lg grid grid-rows-12`}>
-        <section className='row-start-1 space-y-5 p-10 row-end-11 bg-oscuro-rebajado rounded-lg'> {/*en esta parte va a estar los mensajes */}
-        {mensajes.length > 0 ? mensajes.map((mensaje,index)=>(<Mensaje key={index} mensaje={mensaje} />)) : <p className='text-white text-3xl font-bold text-center'>Hola de nuevo, espero poder ayudarte</p>}
+        <section className=' row-start-1 space-y-5 p-10 row-end-11 bg-oscuro-rebajado rounded-lg'> {/*en esta parte va a estar los mensajes */}
+        {
+        /*basicamente aqui estoy renderizando un arreglo
+          pero en si, es informacion de un arreglo, que pasa por un componente
+          el cual al ser retornado, se genera con todo y estilos
+        */
+        mensajes.length > 0 ? mensajes.map((mensaje,index)=>(<Mensaje key={index} mensaje={mensaje} />)) : <p className='text-white text-3xl font-bold text-center gradiente'>Hola de nuevo, espero poder ayudarte</p>}
         </section>
         <section className='row-start-11 row-end-13 flex justify-center items-center p-5'>  {/*esta es la parte del input */}
         

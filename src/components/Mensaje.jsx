@@ -11,10 +11,10 @@ const Mensaje = ({mensaje}) => {
                 <img className='rounded-full w-20' src={robot} alt="" />
             </picture>
         </div>
-        <div className='flex justify-start'>
-            <div className='bg-oscuro-rebajado p-3 rounded-lg m-2'>
-            <p className='text-white'>{mensaje}</p>
-            </div>
+        <div className='flex justify-start w-max'>
+            <div className='bg-oscuro-rebajado p-3 rounded-lg m-2 overflow-auto'>
+  <p className='text-white break-words'>{mensaje}</p>
+</div>
         </div>
     </div>
   )
