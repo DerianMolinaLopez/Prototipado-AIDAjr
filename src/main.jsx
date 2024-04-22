@@ -6,6 +6,7 @@ import Inicio from './components/pages/InicioCursos/Inicio.jsx'
 import PaginaExcel from './components/pages/PaginaExcel.jsx'
 import PaginaPower from './components/pages/PaginaPower.jsx'
 import PaginaWord from './components/pages/PaginaWord.jsx'
+import Login from './components/pages/Login.jsx'
 import PresentacionHerramientas from './components/PresentacionHerramientas.jsx'
 import {createBrowserRouter,RouterProvider}  from 'react-router-dom'
 //el router para mandar todas las rutas
@@ -33,8 +34,14 @@ const router  = createBrowserRouter([
     element:<PaginaPower/>
   },
   {
+
     path: '/AIDA-CURSOS',
     element:<Inicio/>
+  },
+
+{
+    path: '/Login',
+    element:<Login/>
   },
 
 ])
