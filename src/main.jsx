@@ -5,6 +5,7 @@ import './index.css'
 import PaginaExcel from './components/pages/PaginaExcel.jsx'
 import PaginaPower from './components/pages/PaginaPower.jsx'
 import PaginaWord from './components/pages/PaginaWord.jsx'
+import Login from './components/pages/Login.jsx'
 import PresentacionHerramientas from './components/PresentacionHerramientas.jsx'
 import {createBrowserRouter,RouterProvider}  from 'react-router-dom'
 //el router para mandar todas las rutas
@@ -31,7 +32,10 @@ const router  = createBrowserRouter([
     path: '/AIDAjr-modelo/power',
     element:<PaginaPower/>
   },
-
+  {
+    path: '/Login',
+    element:<Login/>
+  },
 ])
 //? en este proyecto habra rutas y otras que si o si seran anidadas
 

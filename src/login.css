@@ -1,0 +1,134 @@
+*{box-sizing: border-box;}
+
+div{height: 100%;}
+
+@keyframes background{
+    100%{background-size: 4000px, 1000px;}
+
+}
+body{
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(163%2c 169%2c 22%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c444.726C82.048%2c446.255%2c142.393%2c373.296%2c212.625%2c330.85C285.179%2c287%2c374.27%2c263.344%2c419.134%2c191.412C466.1%2c116.111%2c482.102%2c19.841%2c460.253%2c-66.174C439.177%2c-149.145%2c355.597%2c-195.073%2c303.674%2c-263.135C247.281%2c-337.057%2c225.937%2c-443.546%2c141.946%2c-483.424C55.551%2c-524.443%2c-55.721%2c-520.37%2c-138.974%2c-473.3C-218.95%2c-428.082%2c-235.732%2c-323.601%2c-281.563%2c-243.975C-317.779%2c-181.055%2c-372.134%2c-126.805%2c-379.954%2c-54.629C-387.657%2c16.465%2c-353.721%2c82.925%2c-324.029%2c147.979C-294.331%2c213.047%2c-260.339%2c274.712%2c-207.591%2c323.018C-147.214%2c378.312%2c-81.857%2c443.2%2c0%2c444.726' fill='%23828712'%3e%3c/path%3e%3cpath d='M1440 1218.529C1564.228 1241.58 1706.162 1203.127 1796.624 1114.9180000000001 1884.32 1029.406 1866.8690000000001 887.985 1899.938 770.047 1927.138 673.038 1975.4569999999999 583.995 1973.7359999999999 483.26 1971.853 373.03999999999996 1947.412 264.257 1889.691 170.341 1825.2 65.40899999999999 1749.196-58.77200000000005 1627.8029999999999-79.59799999999996 1505.867-100.51700000000005 1414.632 34.48599999999999 1295.662 68.42899999999997 1175.28 102.77499999999998 1007.9010000000001 20.187000000000012 931.223 119.142 853.147 219.901 951.977 365.519 967.4069999999999 492.051 978.4449999999999 582.571 976.563 671.605 1008.986 756.837 1043.229 846.855 1093.644 926.2719999999999 1159.367 996.673 1242.422 1085.6399999999999 1320.333 1196.324 1440 1218.529' fill='%23c4cb1a'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+
+}
+
+div{
+    display: grid;
+    place-items: center;
+    margin:0;
+    padding: 0 24px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(163%2c 169%2c 22%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c444.726C82.048%2c446.255%2c142.393%2c373.296%2c212.625%2c330.85C285.179%2c287%2c374.27%2c263.344%2c419.134%2c191.412C466.1%2c116.111%2c482.102%2c19.841%2c460.253%2c-66.174C439.177%2c-149.145%2c355.597%2c-195.073%2c303.674%2c-263.135C247.281%2c-337.057%2c225.937%2c-443.546%2c141.946%2c-483.424C55.551%2c-524.443%2c-55.721%2c-520.37%2c-138.974%2c-473.3C-218.95%2c-428.082%2c-235.732%2c-323.601%2c-281.563%2c-243.975C-317.779%2c-181.055%2c-372.134%2c-126.805%2c-379.954%2c-54.629C-387.657%2c16.465%2c-353.721%2c82.925%2c-324.029%2c147.979C-294.331%2c213.047%2c-260.339%2c274.712%2c-207.591%2c323.018C-147.214%2c378.312%2c-81.857%2c443.2%2c0%2c444.726' fill='%23828712'%3e%3c/path%3e%3cpath d='M1440 1218.529C1564.228 1241.58 1706.162 1203.127 1796.624 1114.9180000000001 1884.32 1029.406 1866.8690000000001 887.985 1899.938 770.047 1927.138 673.038 1975.4569999999999 583.995 1973.7359999999999 483.26 1971.853 373.03999999999996 1947.412 264.257 1889.691 170.341 1825.2 65.40899999999999 1749.196-58.77200000000005 1627.8029999999999-79.59799999999996 1505.867-100.51700000000005 1414.632 34.48599999999999 1295.662 68.42899999999997 1175.28 102.77499999999998 1007.9010000000001 20.187000000000012 931.223 119.142 853.147 219.901 951.977 365.519 967.4069999999999 492.051 978.4449999999999 582.571 976.563 671.605 1008.986 756.837 1043.229 846.855 1093.644 926.2719999999999 1159.367 996.673 1242.422 1085.6399999999999 1320.333 1196.324 1440 1218.529' fill='%23c4cb1a'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-position:-500px 0;
+    color: #f9f9f9;
+    font-family: "Euclid Circular A";
+    animation: background 10s infinite alternate linear;
+}
+
+@media (width>=500px){
+    div{padding: 0;}
+}
+
+.login{
+    width: 90%;
+    padding: 70px 30px 44px;
+    border-radius: 22px;
+    background-color: #4a61a7;
+    text-align: center;
+}
+
+@media(width>=450px){
+    .login{width: 380px;}
+}
+
+.logo{
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: linear-gradient(-45deg, #157ae1 , #c7a1ff);
+    padding: 2px;
+    width: 120px;
+    height: 120px;
+}
+
+.logo>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #161616
+}
+
+.login>h2{
+    font-size: 36px;
+    font-weight: 500;
+    margin: 0 0 4px;
+}
+
+.login>h3{
+    color: rgba(255, 255, 255, 0.38);
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.login-form{
+    display: grid;
+    gap: 16px;
+    place-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.textbox{
+    width: 100%;
+    position: relative;
+}
+
+.textbox span{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    translate: 0 -50%;
+    color: rgba(255, 255, 255, 0.38);
+}
+
+.login input,
+.login button{
+    width: 100%;
+    height: 60px;
+    outline: none;
+    padding: 0px;
+    font-family: inherit;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.login input{
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    padding: 0 20px 0 50px;
+    margin: 5px;
+    color: inherit;
+}
+
+.login input:focus{
+    border-color: #157ae1;
+}
+/* ALT 126 ~ */
+
+.login button{
+    cursor: pointer;
+    background: #157ae1 ;
+    color: #f9f9f9;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 5px;
+
+}
+
+.login a{
+    color: #157ae1;
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+}
