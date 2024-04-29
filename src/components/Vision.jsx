@@ -1,6 +1,6 @@
 import React from 'react'
 import imagen from '../img/estudioso.jpg'
-const Nosotros = () => {
+const Vision = () => {
   return (
     <article className='grid grid-cols-2 pt-10 px-10'>
         <article className='w-full flex justify-center'>
@@ -9,7 +9,7 @@ const Nosotros = () => {
            </picture>
         </article>
         <article className='w-1/2'>
-            <p className='text-white font-bold text-lg'>Somos un equipo multidisciplinario compuesto por 4 individuos con habilidades y experiencias diversas. En el campo de la ingeniería en sistemas, pasando por expertos en negocios y especialistas en comunicación, cada miembro de nuestro equipo aporta una perspectiva única y valiosa a nuestro proyecto.</p>
+            <p className='text-white font-bold text-lg'>Con AIDA JR, no solo estamos trabajando para abordar los desafíos actuales, sino que también tenemos una visión clara del futuro que queremos abordar. Visualizamos un mundo donde nuestra innovación sea una base de estudio y enseñanza, donde esta radique en todas las áreas y niveles educativos.</p>
            </article>
       
     </article>
@@ -17,4 +17,4 @@ const Nosotros = () => {
 }
 //aidajr\src\img\estudioso.jpg
 
-export default Nosotros
+export default Vision

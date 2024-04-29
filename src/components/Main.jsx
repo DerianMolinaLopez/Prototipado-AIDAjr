@@ -2,6 +2,7 @@ import React from 'react'
 import Nosotros from './Nosotros'
 import Mision from './Mision'
 import Planes from './Planes'
+import Vision from './Vision'
 const Main = () => {
 
   return (
@@ -21,7 +22,7 @@ const Main = () => {
       </div>
       <h2 className='text-center text-5xl font-black    '>Nuestra vision para el futuro</h2>
       <div className='bg-power-point'>{/*visison */}
-            <Nosotros/>
+            <Vision/>
       </div>
       
       </section>

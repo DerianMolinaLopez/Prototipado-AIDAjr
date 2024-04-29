@@ -13,7 +13,7 @@ const Planes = () => {
             ¿Aprender herramientas de oficina?
         </h4>
         <p className='text-white'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, distinctio aperiam dolorem veritatis possimus sunt aliquid officiis voluptatibus dolores est nisi. Eius praesentium necessitatibus placeat deserunt at omnis officia similique.
+        Descubre con AIDA JR el Aprendizaje de Office puede transformar tu experiencia con Word, PowerPoint y Excel. Desde la creación de documentos profesionales y presentaciones impactantes hasta el manejo eficiente de datos y análisis en Excel, nuestra plataforma te proporciona las herramientas y conocimientos necesarios para tener éxito en el mundo digital de hoy.
         </p>
             <a href="" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
@@ -29,7 +29,7 @@ const Planes = () => {
         </picture>
         <h4 className='text-center text-white font-bold text-2xl'   >Planes Educativos para escuelas o tutores</h4>
         <p className='text-white'>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, distinctio aperiam dolorem veritatis possimus sunt aliquid officiis voluptatibus dolores est nisi. Eius praesentium necessitatibus placeat deserunt at omnis officia similique.
+        Ofrecemos una variedad de planes educativos para satisfacer tus necesidades de aprendizaje. Desde estudiantes hasta profesionales, nuestros planes están diseñados para adaptarse a diferentes niveles de habilidad y objetivos. Para el desarrollo de manera temprana a este ámbito de herramientas y asi expandir tu conjunto de habilidades, tenemos un plan educativo para ti.
         </p>
         <a href="" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
@@ -46,7 +46,7 @@ const Planes = () => {
         </picture>
         <h4 className='text-center text-white font-bold text-2xl'   >Pruebas gratuitas </h4>
         <p className='text-white'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptate saepe pariatur aliquam eius culpa nisi, eos maiores itaque. Soluta excepturi alias voluptate inventore enim veniam labore nemo sapiente iusto.
+        ¿Listo para mejorar tus habilidades en Office? ¡Únete a nuestra comunidad hoy mismo y obtén acceso a una prueba gratuita de AIDA JR Experimenta la potencia de la inteligencia artificial mientras exploras las numerosas funciones y lecciones diseñadas para hacerte un experto en Word, PowerPoint y Excel.
         </p>
         <a href="" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">

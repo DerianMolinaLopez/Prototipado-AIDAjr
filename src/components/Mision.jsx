@@ -4,7 +4,7 @@ const Mision = () => {
     return (
         <article className='grid grid-cols-2 pt-10 px-10'>
              <article className=''>
-                <p className=' text-center text-white font-bold text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus fugiat reprehenderit similique quisquam ipsum, perspiciatis, vitae culpa consectetur voluptas ipsam necessitatibus at quis repellendus voluptatum, consequatur nam labore explicabo ducimus.</p>
+                <p className=' text-center text-white font-bold text-lg'>Con AIDA JR, creemos en el poder de la innovación para transformar la educación. Nos esforzamos por ser pioneros en este campo de aprendizaje, buscando constantemente nuevas formas de mejorar las habilidades y conocimiento de niños y jóvenes. Nuestra visión es crear un futuro más brillante y capaz para todos.</p>
                </article>
             <article className='w-full flex justify-center'>
                <picture className=''>
