@@ -43,3 +43,42 @@ html, body {
 -webkit-box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);
 -moz-box-shadow: -2px 2px 25px 0px rgba(0,0,0,0.75);
   }
+.ancho-maximo{
+  max-width: 52rem;
+}
+.fondo{
+  background-image: url('../src/img/robotsColores.jpg');
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: 5rem;
+  background-position:center top;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.redondeo-imagen {
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+  height: 20rem;
+  background-position: center top;
+  background-image: url('../src/img/robotsColores.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.oscurecer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con 70% de opacidad */
+}
+
+.anchura{
+  width: 30rem;
+}
+.letra{
+  font-size: 1.3rem;
+}

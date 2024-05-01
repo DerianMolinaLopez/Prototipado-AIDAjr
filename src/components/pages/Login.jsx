@@ -1,7 +1,8 @@
 import React from 'react'
 const Login = () => {
 return(
-    <div class="entrada">
+    <div className='imagen w-screen'>
+     <div class="entrada centralizado">
         <link rel="stylesheet" href="/src/login.css" />
         <article class="login">
             <article class="logo">
@@ -29,6 +30,8 @@ return(
             </form>
         </article>
     </div>
+    </div>
+   
     )
 }
 export default Login

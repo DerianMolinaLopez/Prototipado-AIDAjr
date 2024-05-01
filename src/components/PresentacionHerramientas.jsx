@@ -27,14 +27,14 @@ const PresentacionHerramientas = () => {
     <div className={`relative transition-all duration-500 ${opacity ? 'opacity-100' : 'opacity-0'} `} >
       <h2 className='text-center left-16 top-10 absolute font-bold text-4xl'>¿Con que vamos a trabajar ahora?</h2>
       <div className='posicionamiento absolute flex gap-5 w-56'>
-        <Link to="/AIDAjr-modelo/word" className='hover:scale-150 transition-all duration-200'>
+        <Link to="/AIDAjr-modelo/word" className='transition-all duration-200'>
           <img src={word} alt="" />
         </Link>
-        <Link to="/AIDAjr-modelo/power" className='hover:scale-150 transition-all duration-200'>
+        <Link to="/AIDAjr-modelo/power" className=' transition-all duration-200'>
           <img src={power} alt="" />
           
         </Link>
-        <Link to='/AIDAjr-modelo/excel' className='hover:scale-150  transition-all duration-200'>
+        <Link to='/AIDAjr-modelo/excel' className=' transition-all duration-200'>
           <img src={excel} alt="" />
           
         </Link>
