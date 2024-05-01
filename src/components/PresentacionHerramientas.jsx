@@ -20,7 +20,50 @@ const PresentacionHerramientas = () => {
     setTimeout(()=>{
       setOpacity(!opacity )
     },500)
-    console.log(opacity)
+  
+  },[])
+
+  return (
+    <>
+   <div className='w-screen bg-verde-mongo'>
+    <div className='flex flex-row'>
+      <div className='bg-indigo-700 w-5/12'>a</div>
+      <div className=' w-7/12' >
+          <div className='bg-green-800  verde absolute'>
+            <h2 className='text-center left-40 text-white font-semibold top-60 absolute text-4xl'>¿Con que vamos a trabajar ahora?</h2>
+            <div className='posicionamiento absolute flex gap-5 w-56 bg-white h-20 p-3 rounded-lg'>
+              <Link to="/AIDAjr-modelo/word" className='transition-all duration-200'>
+                <img src={word} alt="" />
+              </Link>
+              <Link to="/AIDAjr-modelo/power" className=' transition-all duration-200'>
+                <img src={power} alt="" />
+              </Link>
+              <Link to='/AIDAjr-modelo/excel' className=' transition-all duration-200'>
+                <img src={excel} alt="" />
+              </Link>
+            </div>
+            <h2 className='text-center left-40 text-white font-semibold top-96 mt-40 absolute text-4xl'>Apoya tu conocimiento con los cursos que tenemos</h2>
+
+          </div>
+        
+      </div>
+    </div>
+   </div>
+    
+    </>
+  )
+}
+
+export default PresentacionHerramientas
+/*
+
+const PresentacionHerramientas = () => {
+  const [opacity,setOpacity] = useState(false)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setOpacity(!opacity )
+    },500)
+  
   },[])
 
   return (
@@ -45,5 +88,4 @@ const PresentacionHerramientas = () => {
     </div>
   )
 }
-
-export default PresentacionHerramientas
+*/
