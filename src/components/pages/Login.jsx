@@ -23,7 +23,7 @@ return(
                         </span> */}
                   </article>
                   <button type='submit'>Login</button>
-                  <a href="htttps://website.com">
+                  <a href="htttps://website.com" className='text-white'>
                     ¿Se te ha olvidado tus datos?
                   </a>
             </form>

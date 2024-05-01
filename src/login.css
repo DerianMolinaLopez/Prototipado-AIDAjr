@@ -127,7 +127,9 @@ div{
 }
 
 .login a{
-    color: #157ae1;
+   
+    color: white;
+    font-weight: 700;  
     font-size: 16px;
     text-align: left;
     text-decoration: none;
