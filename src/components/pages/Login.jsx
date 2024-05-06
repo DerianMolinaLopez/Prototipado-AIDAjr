@@ -1,37 +1,87 @@
 import React from 'react'
-const Login = () => {
-return(
-    <div className='imagen w-screen'>
-     <div class="entrada centralizado">
-        <link rel="stylesheet" href="/src/login.css" />
-        <article class="login">
-            <article class="logo">
-                <img src="/src/img/logooAIDA.png" alt="" />
-            </article>
-            <h2>Login</h2>
-            <h3>Bienvenido a la experiencia AIDA JR</h3>
-            <form class="frmLogin">
-                  <article class="textbox">
-                        <input type="email" placeholder="Nombre de usuario"/>
-                        {/* <span class="material-symbols-outlined">
-                            account_circle
-                        </span> */}
-                  </article>
-                  <article class="textbox">
-                    <input type="password" placeholder='Contraseña' />   
-                       {/* <span class="material-symbols-outlined">
-                            lock
-                        </span> */}
-                  </article>
-                  <button type='submit'>Login</button>
-                  <a href="htttps://website.com" className='text-white'>
-                    ¿Se te ha olvidado tus datos?
-                  </a>
-            </form>
-        </article>
-    </div>
-    </div>
-   
-    )
+import { useState,useEffect } from 'react'
+import Error from '../Error';
+import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+import axios from 'axios'
+async function loginUser(usuario, password) {
+    try {
+    
+        const response = await axios.post('http://localhost:3000/user/login', { usuario, password });
+        return response.data.usuarioEncontrado;
+    } catch (error) {
+        console.error("Error al intentar iniciar sesión:", error.message);
+    }
 }
-export default Login
+
+
+const Login = () => {
+    const [usuario, setUsuario] = useState('');
+    const [password, setPassword] = useState('');
+    const [mensaje, setMensaje] = useState('');   
+    const [error, setError] = useState(false); // Cambiar useEffect a useState
+   // const router = useRouter()
+   const navigate = useNavigate()
+
+    const handleSubmit = async e => {
+        e.preventDefault();
+        if([usuario,password].includes('')){    
+            setMensaje('Todos los campos son obligatorios');
+            setError(true);
+            setTimeout(() => {
+                setError(false);
+            }, 3000);
+            return 
+        }
+
+
+
+        console.log('enviando');
+
+        const usuarioEncontrado = await loginUser(usuario, password);
+        if (!usuarioEncontrado) {
+           
+            setMensaje('Usuario no encontrado');
+            setError(true);
+
+            setTimeout(() => {
+                setError(false);
+            }, 3000);
+        }else{
+          //router.push('/AIDA-CURSOS')
+          navigate('/AIDA-CURSOS')
+        }
+      
+    };
+
+    return (
+        <div className='imagen w-screen'>
+            <div className="entrada centralizado">
+                <link rel="stylesheet" href="/src/login.css" />
+                <article className="login">
+                    <article className="logo">
+                        <img src="/src/img/logooAIDA.png" alt="" />
+                    </article>
+                    <h2>Login</h2>
+                    <h3>Bienvenido a la experiencia AIDA JR</h3>
+                    <form onSubmit={handleSubmit} className="frmLogin">
+                        <article className="textbox">
+                            <input type="text" placeholder="Nombre de usuario" value={usuario} onChange={e => setUsuario(e.target.value)} />
+                        </article>
+                        <article className="textbox">
+                            <input type="password" placeholder='Contraseña' value={password} onChange={e => setPassword(e.target.value)} />   
+                        </article>
+                        <button type='submit'>Login</button>
+                        <a href="htttps://website.com" className='text-white'>
+                            ¿Se te ha olvidado tus datos?
+                        </a>
+                    </form>
+                    {error && <Error mensaje={mensaje}></Error>}
+                </article>
+            </div>
+        </div>
+    );
+};
+
+export default Login;
