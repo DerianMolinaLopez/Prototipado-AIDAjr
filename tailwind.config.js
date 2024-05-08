@@ -33,6 +33,7 @@ export default {
     textColor: theme => ({
       ...theme('colors'),
       'amarillo-logo':'#FDE373',
+      'verde-mongo':'#023430'
     })
       
   },

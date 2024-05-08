@@ -2,6 +2,7 @@ import React from 'react'
 import robotPresentador from '../img/presentadorVacio.jpeg'
 import word from '../img/word.png'
 import excel from '../img/excel.png'
+import aidajr from '../img/logooAIDA.png'
 import { Link } from 'react-router-dom'
 import power from '../img/powerPoint.png'
 import { useState,useEffect } from 'react'
@@ -26,28 +27,40 @@ const PresentacionHerramientas = () => {
   return (
     <>
    <div className='w-screen bg-verde-mongo'>
-    <div className='flex flex-row'>
-      <div className='bg-indigo-700 w-5/12'>a</div>
-      <div className=' w-7/12' >
-          <div className='bg-green-800  verde absolute'>
-            <h2 className='text-center left-40 text-white font-semibold top-60 absolute text-4xl'>¿Con que vamos a trabajar ahora?</h2>
-            <div className='posicionamiento absolute flex gap-5 w-56 bg-white h-20 p-3 rounded-lg'>
-              <Link to="/AIDAjr-modelo/word" className='transition-all duration-200'>
-                <img src={word} alt="" />
-              </Link>
-              <Link to="/AIDAjr-modelo/power" className=' transition-all duration-200'>
-                <img src={power} alt="" />
-              </Link>
-              <Link to='/AIDAjr-modelo/excel' className=' transition-all duration-200'>
-                <img src={excel} alt="" />
-              </Link>
-            </div>
-            <h2 className='text-center left-40 text-white font-semibold top-96 mt-40 absolute text-4xl'>Apoya tu conocimiento con los cursos que tenemos</h2>
-
+    <div className='grid grid-cols-2'>
+        <div className='p-5 mt-16' >
+          <p className='teclas text-4xl ml-72  text-white  font-bold'>AIDAJR</p>
+          <div className='flex justify-center'>
+            <img className='w-3/4 h-3/4' src={aidajr} alt="imagen-logo" />
           </div>
-        
-      </div>
+          
+        </div>
+        <div className='oval-half-red mt-10'>
+          <div className='absolute contenedor-herramienta'>
+                          <h1 className='card-herramienta font-bold text-3xl mt-10 ml-5 text-verde-mongo'>
+                          ¿Con que vamos a trabajar ahora?
+                        </h1>
+                      <div className='herramientas anchura flex flex-row justify-around items-center rounded-lg bg-gray-200 h-28'>
+                        <a href="">
+                          <img className='w-16' src={word} alt="icono-word" />
+                        </a>
+                        <a href="">
+                          <img className='w-16' src={excel} alt="icono-excel" />
+                        </a>
+                        <a href="">
+                          <img className='w-16' src={power} alt="icono-power" />
+                        </a>
+                      </div>
+                      <p className='relative top-56 left-28 text-center text-verde-mongo font-extrabold'>¿Sigues confundido? <br /> intenta con nuestra plataforma de aprendizaje</p>
+                      <button className='boton-aprender relative bg-verde-mongo top-60 left-80 rounded-full p-2 text-white font-semibold '>
+                        
+                        <p>Aprender mas</p>
+                      </button>
+          </div>
+         
+        </div>
     </div>
+   
    </div>
     
     </>
