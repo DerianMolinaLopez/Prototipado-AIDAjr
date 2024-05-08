@@ -50,6 +50,7 @@ const Login = () => {
             }, 3000);
         }else{
           //router.push('/AIDA-CURSOS')
+          localStorage.setItem('usuario',JSON.stringify(usuarioEncontrado))
           navigate('/AIDA-CURSOS')
         }
       

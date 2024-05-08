@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { generarClaves } from '../../helpers/generarClaves'
 import CardCurso from './CardCurso'
+import axios from 'axios'
+import { useEffect } from 'react'
 import fondo1 from '../../img/fondo1.jpg'
 import fondo2 from '../../img/fondo2.jpg'
 import fondo3 from '../../img/fondo3.jpg'
+
+
+
+
 
 const informacionCard=[
     {
@@ -52,19 +58,31 @@ const informacionCard=[
         imagen:fondo3
     }
 ]
-const ExploracionCursos = () => {
+
+const ExploracionCursos = ({mensaje,agregarCurso}) => {
+    const [cursosCarga, setCursosCarga ] = useState([])
+    //efecto para cargar ls datos de los cursos
+    useEffect(()=>{
+        const obtenerCursos = async() => {
+            const response = await axios.get('http://localhost:3000/cursos/cursos')
+            console.log(response.data)
+            setCursosCarga(response.data)
+        }
+        obtenerCursos()
+    },[])
   return (
     <section>
         <h3 className='text-3xl text-center mt-10'>
-            Puedo ver que no estas en ningun curso, escoge uno y mejora tus habilidades
+            {mensaje}
         </h3>
         <div className='grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10'>
-           {informacionCard.map((curso) =>(
+           {cursosCarga.map((curso,index) =>(
            <CardCurso 
-                      key={generarClaves()}
-                      tiutlo={curso.titulo}
-                      descripcion={curso.descripcion}
-                      imagen={curso.imagen}
+                      key={curso.id}
+                      tiutlo={curso.name}
+                      descripcion={curso.description}
+                      imagen={informacionCard[index].imagen}
+                      agregarCurso = {agregarCurso}
              />))}
             </div>
         
