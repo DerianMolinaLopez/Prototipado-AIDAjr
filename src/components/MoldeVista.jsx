@@ -1,8 +1,10 @@
 import React, { useEffect,useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import MensajeRobot from './MensajeRobot';
 import Mensaje from './Mensaje';
 const MoldeVista = () => {
   const location = useLocation();
+  let tipo = ''
    const [mensaje,setMensaje]= useState('')
    const [mensajes,setMensajes]= useState([])//este es para guardar los mensajes en el mismo chat y qeu se vean todos los componentes
   useEffect(() => { //este efecto verifica los cambios en la variable location que es de react router dom
@@ -23,13 +25,15 @@ const MoldeVista = () => {
   let colorLocal = ''
   if(pathname === '/AIDAjr-modelo/word'){
     colorLocal = colores[0]
+    tipo = 'word'
   }
   if(pathname==='/AIDAjr-modelo/excel'){
     colorLocal = colores[1]
+    tipo = 'excel'
   }
   if(pathname==='/AIDAjr-modelo/power'){
     colorLocal = colores[2]
-  
+    tipo = 'power'
   }
   const hansleSubmit = (e)=>{
     e.preventDefault()
@@ -50,7 +54,10 @@ const MoldeVista = () => {
           pero en si, es informacion de un arreglo, que pasa por un componente
           el cual al ser retornado, se genera con todo y estilos
         */
-        mensajes.length > 0 ? mensajes.map((mensaje,index)=>(<Mensaje key={index} mensaje={mensaje} />)) : <p className='text-white text-3xl font-bold text-center gradiente'>Hola de nuevo, espero poder ayudarte</p>}
+        mensajes.length > 0 ? mensajes.map((mensaje,index)=>(<Mensaje key={index} mensaje={mensaje} />)) :
+        
+          <MensajeRobot tipo={tipo}></MensajeRobot>
+          }
         </section>
         <section className='row-start-11 row-end-13 flex justify-center items-center p-5'>  {/*esta es la parte del input */}
         

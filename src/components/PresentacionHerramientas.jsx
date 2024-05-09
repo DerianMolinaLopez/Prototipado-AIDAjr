@@ -1,9 +1,10 @@
 import React from 'react'
 import robotPresentador from '../img/presentadorVacio.jpeg'
+import { Link } from 'react-router-dom'
 import word from '../img/word.png'
 import excel from '../img/excel.png'
 import aidajr from '../img/logooAIDA.png'
-import { Link } from 'react-router-dom'
+
 import power from '../img/powerPoint.png'
 import { useState,useEffect } from 'react'
 
@@ -41,15 +42,15 @@ const PresentacionHerramientas = () => {
                           ¿Con que vamos a trabajar ahora?
                         </h1>
                       <div className='herramientas anchura flex flex-row justify-around items-center rounded-lg bg-gray-200 h-28'>
-                        <a href="">
+                        <Link to='/AIDAjr-modelo/word'>
                           <img className='w-16' src={word} alt="icono-word" />
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link to='/AIDAjr-modelo/excel'>
                           <img className='w-16' src={excel} alt="icono-excel" />
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link to='/AIDAjr-modelo/power'>
                           <img className='w-16' src={power} alt="icono-power" />
-                        </a>
+                        </Link>
                       </div>
                       <p className='relative top-56 left-28 text-center text-verde-mongo font-extrabold'>¿Sigues confundido? <br /> intenta con nuestra plataforma de aprendizaje</p>
                       <button className='boton-aprender relative bg-verde-mongo top-60 left-80 rounded-full p-2 text-white font-semibold '>

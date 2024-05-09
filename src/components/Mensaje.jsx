@@ -1,4 +1,5 @@
 import robot from '../img/robot.jpg'
+
 /*
 cuando el mensaje es del usuario este se acomoda del lado de la derecha
 
