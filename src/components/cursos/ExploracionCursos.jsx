@@ -59,29 +59,23 @@ const informacionCard=[
     }
 ]
 
-const ExploracionCursos = ({mensaje,agregarCurso}) => {
-    const [cursosCarga, setCursosCarga ] = useState([])
+const ExploracionCursos = ({mensaje,agregarCurso,cursos}) => {
+
     //efecto para cargar ls datos de los cursos
-    useEffect(()=>{
-        const obtenerCursos = async() => {
-            const response = await axios.get('http://localhost:3000/cursos/cursos')
-            console.log(response.data)
-            setCursosCarga(response.data)
-        }
-        obtenerCursos()
-    },[])
+  
   return (
     <section>
         <h3 className='text-3xl text-center mt-10'>
             {mensaje}
         </h3>
         <div className='grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10'>
-           {cursosCarga.map((curso,index) =>(
+           {cursos.map((curso) =>(
            <CardCurso 
-                      key={curso.id}
-                      tiutlo={curso.name}
-                      descripcion={curso.description}
-                      imagen={informacionCard[index].imagen}
+                      key={curso._id}
+                      id={curso._id}
+                      tiutlo={curso.nombre}
+                      descripcion={curso.descripcion}
+                      imagen={curso.imagen}
                       agregarCurso = {agregarCurso}
              />))}
             </div>

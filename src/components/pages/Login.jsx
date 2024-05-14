@@ -8,8 +8,9 @@ import axios from 'axios'
 async function loginUser(usuario, password) {
     try {
     
-        const response = await axios.post('http://localhost:3000/user/login', { usuario, password });
-        return response.data.usuarioEncontrado;
+        const response = await axios.get(`http://localhost:3000/user/login/${usuario}/${password}`)
+
+        return response.data
     } catch (error) {
         console.error("Error al intentar iniciar sesión:", error.message);
     }
@@ -39,8 +40,11 @@ const Login = () => {
 
         console.log('enviando');
 
-        const usuarioEncontrado = await loginUser(usuario, password);
-        if (!usuarioEncontrado) {
+       const usuariojson= await loginUser(usuario, password);
+       const {status} = usuariojson
+       console.log(usuariojson)
+     
+        if (status==='error') {
            
             setMensaje('Usuario no encontrado');
             setError(true);
@@ -50,7 +54,7 @@ const Login = () => {
             }, 3000);
         }else{
           //router.push('/AIDA-CURSOS')
-          localStorage.setItem('usuario',JSON.stringify(usuarioEncontrado))
+          localStorage.setItem('usuario',JSON.stringify(usuariojson))
           navigate('/AIDA-CURSOS')
         }
       

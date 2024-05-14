@@ -1,31 +1,47 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
+import CardCurso from './CardCurso'
 import axios from 'axios'
 import ExploracionCursos from './ExploracionCursos'
 const MainCursos = () => {
+  const [cursosUsuario,setCursosUsuario] = useState([{}])
   const [cursos,setCursos] = useState([])
   const [mensaje ,setMensaje] = useState('')
- useEffect(() => {
-  const obtenerCursos = async(usuario) => {
-    console.log(usuario)
-    const response = await axios.get(`http://localhost:3000/user/usuario-curso/${usuario.id}`)
-    setCursos(response.data.cursos)
-    if(response.data.cursos.length === 0){
-      setMensaje('Oh puedo ver que no tienes ningun curso, adelante explora')
-    } else {
-      setMensaje('Estos son tus cursos')
-    }
+useEffect(() => {
+  //dos funciones, unaque trae todos los cursos y otra que trae todods los cursos que el usuario esta inscrito
+
+  const obtenerCursos = async () =>{
+    const response = await axios.get('http://localhost:3000/cursos')
+    setCursos(response.data)
+
   }
-
-  //primero obtenemos las credenciales del usuario
-  const usuario = JSON.parse(localStorage.getItem('usuario'))
-
-  obtenerCursos(usuario)
+  const obtenerCursosUsuario = async () =>{
+    //todos los cursos a lo que el alumno esta inscrito pero taremos los datos del lcoalStoage
+    const usuario = JSON.parse(localStorage.getItem('usuario'))
+    console.log(usuario)
+    const {_id} = usuario.user
+    console.log(_id)
+    const cursosUsuario = await axios.get(`http://localhost:3000/user/cursos/${_id}`)
+    console.log(cursosUsuario.data.cursos)
+    setCursosUsuario(cursosUsuario.data.cursos)
+  }
+  obtenerCursos()
+  obtenerCursosUsuario()
+  
 }, [])
 
 const agregarCurso = (curso) =>{
   //vamos a recibir un objeot que contiene enombre, el id, nombre, descripcion, para la
   //para la peticion http solo mandaremos el id como parametro en la peticion
+  /*
+  /*
+  key={curso._id}
+                      tiutlo={curso.nombre}
+                      descripcion={curso.descripcion}
+                      imagen={curso.imagen}
+                      agregarCurso = {agregarCurso}
+*/
+  
   console.log('agregando curso')
 }
   return (
@@ -38,7 +54,33 @@ const agregarCurso = (curso) =>{
              </article>
         </div>
       </section>
-      <ExploracionCursos mensaje={mensaje}
+      <section >
+        {cursosUsuario.length>0? <h2 className='text-3xl text-center mt-10 font-bold'>Cursos en los que estas inscrito</h2>: ''}
+   
+        <div className={`${cursosUsuario.length>0? "grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10":
+          ''
+        } `}>
+            {cursosUsuario.length > 0 ? <>
+     
+        
+            
+        {cursosUsuario.map(curso=>{
+          return <CardCurso key={curso._id}
+                            titulo={curso.nombre}
+                            descripcion={curso.descripcion}
+                            imagen={curso.imagen}
+                            agregarCurso={agregarCurso}
+                            instructor={curso.instructor}
+                            />
+        
+        })}
+        </>: <h3 className='text-3xl text-center mt-10'>No estas inscrito a ningun curso, explora mas opciones</h3>}
+        </div>
+
+      </section>
+      <h2 className='text-center text-2xl my-9'>Cursos que te pueden interesar</h2>
+      <ExploracionCursos cursos={cursos}
+                         mensaje={mensaje}
                          agregarCurso={agregarCurso}/>
       
     </div>
