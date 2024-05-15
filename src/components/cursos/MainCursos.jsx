@@ -7,28 +7,31 @@ const MainCursos = () => {
   const [cursosUsuario,setCursosUsuario] = useState([{}])
   const [cursos,setCursos] = useState([])
   const [mensaje ,setMensaje] = useState('')
-useEffect(() => {
-  //dos funciones, unaque trae todos los cursos y otra que trae todods los cursos que el usuario esta inscrito
-
-  const obtenerCursos = async () =>{
-    const response = await axios.get('http://localhost:3000/cursos')
-    setCursos(response.data)
-
-  }
-  const obtenerCursosUsuario = async () =>{
-    //todos los cursos a lo que el alumno esta inscrito pero taremos los datos del lcoalStoage
-    const usuario = JSON.parse(localStorage.getItem('usuario'))
-    console.log(usuario)
-    const {_id} = usuario.user
-    console.log(_id)
-    const cursosUsuario = await axios.get(`http://localhost:3000/user/cursos/${_id}`)
-    console.log(cursosUsuario.data.cursos)
-    setCursosUsuario(cursosUsuario.data.cursos)
-  }
-  obtenerCursos()
-  obtenerCursosUsuario()
+  useEffect(() => {
+    const obtenerCursos = async () => {
+      const response = await axios.get('http://localhost:3000/cursos')
+      setCursos(response.data)
+    }
   
-}, [])
+    const obtenerCursosUsuario = async () => {
+      const usuario = JSON.parse(localStorage.getItem('usuario'))
+      const { _id } = usuario.user
+      const cursosUsuario = await axios.get(`http://localhost:3000/user/cursos/${_id}`)
+      setCursosUsuario(cursosUsuario.data.cursos)
+    }
+  
+    obtenerCursosUsuario()
+    obtenerCursos()
+  }, [])
+  
+  useEffect(() => {
+    if (cursosUsuario.length > 0 && cursos.length > 0) {
+      // Filtrar los cursos que el usuario ya está inscrito
+      const cursosDisponibles = cursos.filter(curso => !cursosUsuario.some(cursoUsuario => curso._id === cursoUsuario._id))
+      setCursos(cursosDisponibles)
+    }
+  }, [cursosUsuario])
+  
 
 const agregarCurso = (curso) =>{
   //vamos a recibir un objeot que contiene enombre, el id, nombre, descripcion, para la
@@ -55,7 +58,7 @@ const agregarCurso = (curso) =>{
         </div>
       </section>
       <section >
-        {cursosUsuario.length>0? <h2 className='text-3xl text-center mt-10 font-bold'>Cursos en los que estas inscrito</h2>: ''}
+        {cursosUsuario.length>0? <h2 className='text-3xl text-center mt-10 font-bold'>Ultimos cursos que has visto</h2>: ''}
    
         <div className={`${cursosUsuario.length>0? "grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10":
           ''
@@ -65,7 +68,9 @@ const agregarCurso = (curso) =>{
         
             
         {cursosUsuario.map(curso=>{
-          return <CardCurso key={curso._id}
+          return <CardCurso 
+                           tipo={'misCursos'}  
+                           key={curso._id}
                             titulo={curso.nombre}
                             descripcion={curso.descripcion}
                             imagen={curso.imagen}
@@ -79,7 +84,8 @@ const agregarCurso = (curso) =>{
 
       </section>
       <h2 className='text-center text-2xl my-9'>Cursos que te pueden interesar</h2>
-      <ExploracionCursos cursos={cursos}
+      <ExploracionCursos 
+                         cursos={cursos}
                          mensaje={mensaje}
                          agregarCurso={agregarCurso}/>
       

@@ -3,14 +3,18 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import '../src/login.css'
+
 import Inicio from './components/pages/InicioCursos/Inicio.jsx'
 import PaginaExcel from './components/pages/PaginaExcel.jsx'
 import PaginaPower from './components/pages/PaginaPower.jsx'
 import PaginaWord from './components/pages/PaginaWord.jsx'
 import Login from './components/pages/Login.jsx'
+import MisCursos from './components/cursos/MisCursos.jsx'
 import PresentacionHerramientas from './components/PresentacionHerramientas.jsx'
 import {createBrowserRouter,RouterProvider}  from 'react-router-dom'
+import Layout from './layout/Layout.jsx'
 //el router para mandar todas las rutas
+import DetalleCursos from './components/cursos/DetalleCursos.jsx'
 const router  = createBrowserRouter([
   {
     path: '/',
@@ -34,11 +38,26 @@ const router  = createBrowserRouter([
     path: '/AIDAjr-modelo/power',
     element:<PaginaPower/>
   },
-  {
+   {
+    path: '/cursos',
+    element:<Layout/>,
+    children:[
+      {
 
-    path: '/AIDA-CURSOS',
-    element:<Inicio/>
-  },
+        path: '/cursos/AIDA-CURSOS',
+        element:<Inicio/>
+      },
+      {
+        path: '/cursos/AIDA-MIS-CURSOS',
+        element:<MisCursos/>
+      },
+      {
+        path: '/cursos/AIDA-CURSOS/detalle',
+        element:<DetalleCursos/>
+      }
+    ]
+   },
+ 
 
 {
     path: '/Login',

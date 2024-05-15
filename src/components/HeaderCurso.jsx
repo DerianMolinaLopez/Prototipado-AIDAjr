@@ -13,11 +13,11 @@ const HeaderCurso = () => {
         </picture>
         <section> {/*barra de navegacion */}
         <nav className='space-x-5 text-white text-semibold text-lg'>
-            <Link to='/AIDA-CURSOS' className={`
-                 ${location.pathname === '/AIDA-CURSOS' ? 'border-b-4 border-white' : ''}
+            <Link to='/cursos/AIDA-CURSOS' className={`
+                 ${location.pathname === '/cursos/AIDA-CURSOS' ? 'border-b-4 border-white' : ''}
             `}>Inicio</Link>
-            <Link to='/AIDA-CURSOS/mis-cursos' className={`
-                 ${location.pathname === '/AIDA-CURSOS/mis-cursos' ? 'border-b-4 border-white' : ''}
+            <Link to='/cursos/AIDA-MIS-CURSOS' className={`
+                 ${location.pathname === '/cursos/AIDA-MIS-CURSOS' ? 'border-b-4 border-white' : ''}
             `}>Mis cursos</Link>
         </nav>
         </section>

@@ -59,21 +59,23 @@ const informacionCard=[
     }
 ]
 
-const ExploracionCursos = ({mensaje,agregarCurso,cursos}) => {
+const ExploracionCursos = ({mensaje,agregarCurso,cursos, titulo}) => {
 
     //efecto para cargar ls datos de los cursos
   
   return (
     <section>
+     
         <h3 className='text-3xl text-center mt-10'>
             {mensaje}
         </h3>
         <div className='grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10'>
            {cursos.map((curso) =>(
            <CardCurso 
+                      tipo={'exploracion'}
                       key={curso._id}
                       id={curso._id}
-                      tiutlo={curso.nombre}
+                      titulo={curso.nombre}
                       descripcion={curso.descripcion}
                       imagen={curso.imagen}
                       agregarCurso = {agregarCurso}

@@ -38,12 +38,11 @@ const Login = () => {
 
 
 
-        console.log('enviando');
+
 
        const usuariojson= await loginUser(usuario, password);
        const {status} = usuariojson
-       console.log(usuariojson)
-     
+
         if (status==='error') {
            
             setMensaje('Usuario no encontrado');
@@ -55,7 +54,7 @@ const Login = () => {
         }else{
           //router.push('/AIDA-CURSOS')
           localStorage.setItem('usuario',JSON.stringify(usuariojson))
-          navigate('/AIDA-CURSOS')
+          navigate('/cursos/AIDA-CURSOS')
         }
       
     };

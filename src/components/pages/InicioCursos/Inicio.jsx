@@ -4,7 +4,7 @@ import MainCursos from '../../cursos/MainCursos'
 const Inicio = () => {
   return (
     <div>
-        <HeaderCurso/>
+       
         <MainCursos/>
     </div>
   )

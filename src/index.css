@@ -174,3 +174,7 @@ html, body {
   from { width: 0 }
   to { width: 39ch }
 }
+.anchura-banner-curso{
+  width: 100%;
+  height: 17rem;
+}
