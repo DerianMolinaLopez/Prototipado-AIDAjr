@@ -9,6 +9,8 @@ import PaginaExcel from './components/pages/PaginaExcel.jsx'
 import PaginaPower from './components/pages/PaginaPower.jsx'
 import PaginaWord from './components/pages/PaginaWord.jsx'
 import Login from './components/pages/Login.jsx'
+import CursoSeleccionadoInstructor from './components/CursoSeleccionadoInstructor.jsx'
+import MisAlumnos from './components/pages/MisAlumnos.jsx'
 import MisCursos from './components/cursos/MisCursos.jsx'
 import PresentacionHerramientas from './components/PresentacionHerramientas.jsx'
 import {createBrowserRouter,RouterProvider}  from 'react-router-dom'
@@ -54,6 +56,15 @@ const router  = createBrowserRouter([
       {
         path: '/cursos/AIDA-CURSOS/detalle',
         element:<DetalleCursos/>
+      },
+      {
+        path: '/cursos/AIDA-MIS-CURSOS/mis-alumnos',
+        element:<MisAlumnos/>
+      }
+      ,
+      {
+        path: '/cursos/AIDA-MIS-CURSOS/mis-alumnos/curso-detalle',
+        element:<CursoSeleccionadoInstructor/>
       }
     ]
    },

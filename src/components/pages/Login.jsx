@@ -53,8 +53,14 @@ const Login = () => {
             }, 3000);
         }else{
           //router.push('/AIDA-CURSOS')
-          localStorage.setItem('usuario',JSON.stringify(usuariojson))
+          if(usuariojson.tipo==='estudiante'){
+            localStorage.setItem('usuario',JSON.stringify(usuariojson))
           navigate('/cursos/AIDA-CURSOS')
+          }else{
+            localStorage.setItem('usuario',JSON.stringify(usuariojson))
+            navigate('/cursos/AIDA-MIS-CURSOS')
+          }
+          
         }
       
     };

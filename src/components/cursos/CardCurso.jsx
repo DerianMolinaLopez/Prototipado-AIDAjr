@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import imag from '../../img/fondo2.jpg'
 const CardCurso = ({titulo,descripcion,imagen,id,tipo,tipoVista}) => {
   const navigate = useNavigate()
   /* para agregar un curso, pasaremos un objeto que tenga el titulo, descripcion */
@@ -21,7 +22,7 @@ const CardCurso = ({titulo,descripcion,imagen,id,tipo,tipoVista}) => {
   return (
     <div className={`${tipoVista=='detalle'?'rounded-md bg-blue-900 p-2 ':'rounded-md shadow-lg p-5 border-2 space-y-5'} ` }>
         <picture> {/*Imagen demostrativa o de concepto */}
-         <img src={imagen} alt="Imagen del curso" />
+         <img src={imag} alt="Imagen del curso" />
         </picture>
       
         <h3 className='font-bold text-lg'>{titulo}</h3>

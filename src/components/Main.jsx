@@ -9,10 +9,10 @@ const Main = () => {
     <main className='mt-10'>
       <section className='redondeo-imagen mb-3'>
          <article className='oscurecer text-white flex justify-around pt-20 '>
-          <p className='text-yellow-400 font-extrabold text-2xl'>NOMBRE</p>
-          <p className='text-green-600 font-extrabold text-2xl'>NOMBRE</p>
-          <p className='text-red-700 font-extrabold text-2xl'>NOMBRE</p>
-          <p className='text-blue-700 font-extrabold text-2xl'>NOMBRE</p>
+          <p className='text-yellow-400 font-extrabold text-2xl'>AIDA</p>
+          <p className='text-green-600 font-extrabold text-2xl'>CALCULIN</p>
+          <p className='text-red-700 font-extrabold text-2xl'>PRODIGY</p>
+          <p className='text-blue-700 font-extrabold text-2xl'>WORDY</p>
          </article>
         </section>
         <div className='flex justify-around mb-20'>

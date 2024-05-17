@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import word from '../img/word.png'
 import excel from '../img/excel.png'
 import aidajr from '../img/logooAIDA.png'
-
+import { useNavigate } from 'react-router-dom'
 import power from '../img/powerPoint.png'
 import { useState,useEffect } from 'react'
 
@@ -17,6 +17,7 @@ import { useState,useEffect } from 'react'
 */
 
 const PresentacionHerramientas = () => {
+  const navigate = useNavigate()
   const [opacity,setOpacity] = useState(false)
   useEffect(()=>{
     setTimeout(()=>{
@@ -24,6 +25,10 @@ const PresentacionHerramientas = () => {
     },500)
   
   },[])
+  const handleDirect = e =>{
+    e.preventDefault()
+    navigate('/Login')
+  }
 
   return (
     <>
@@ -53,7 +58,9 @@ const PresentacionHerramientas = () => {
                         </Link>
                       </div>
                       <p className='relative top-56 left-28 text-center text-verde-mongo font-extrabold'>¿Sigues confundido? <br /> intenta con nuestra plataforma de aprendizaje</p>
-                      <button className='boton-aprender relative bg-verde-mongo top-60 left-80 rounded-full p-2 text-white font-semibold '>
+                      <button 
+                       onClick={e=> handleDirect(e)}
+                      className='boton-aprender relative bg-verde-mongo top-60 left-80 rounded-full p-2 text-white font-semibold '>
                         
                         <p>Aprender mas</p>
                       </button>

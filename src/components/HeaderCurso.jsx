@@ -2,9 +2,15 @@ import React from 'react'
 import perfil from '../img/perfil.jpg'
 import aidajr from '../img/logooAIDA.png'
 import {Link, useLocation} from 'react-router-dom'
+import { useEffect,useState } from 'react'
 const HeaderCurso = () => {
+  const [usuario, setUsuario] = useState({})
+  useEffect(()=>{
+    const usuario =JSON.parse( localStorage.getItem('usuario'))
+       setUsuario(usuario.user.tipo)
+  },[])
+  console.log(usuario)
     const location = useLocation()
-    console.log(location.pathname)
   return (
     <header className='bg-blue-900 w-screen flex flex-row justify-around gap-52'>
       <div className='flex items-center gap-10'>
@@ -19,6 +25,13 @@ const HeaderCurso = () => {
             <Link to='/cursos/AIDA-MIS-CURSOS' className={`
                  ${location.pathname === '/cursos/AIDA-MIS-CURSOS' ? 'border-b-4 border-white' : ''}
             `}>Mis cursos</Link>
+            {usuario ==='instrutor'?
+                   <Link to='/cursos/AIDA-MIS-CURSOS/mis-alumnos' className={`
+                   ${location.pathname === '/cursos/AIDA-MIS-CURSOS/mis-alumnos' ? 'border-b-4 border-white' : ''}
+              `}>GestionarAlumnos</Link>:
+              ''
+                  }
+           
         </nav>
         </section>
       </div>

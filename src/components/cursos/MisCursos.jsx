@@ -13,12 +13,15 @@ const MisCursos = () => {
             const response=await axios.get(`http://localhost:3000/user/cursos/${usuario.user._id}`)
             console.log(response.data.cursos)
             setCursos(response.data.cursos)
+            //vamos a verificar el tipo de usuairo que es
+            //si es de instructor, entocnes habilitamos una de las opciones en la barra de navegacion
+           
         }
         obtenerCursosAlumno()
     },[])
   return (
-    <div>
-      {cursos.length===0 ? <h1 className='tetx-2xl text-center mt-10'>No tienes cursos agrega unos cuantos y regresa</h1>: 
+    <div >
+      {cursos.length===0 ? <h1 className=' text-center mt-10 text-indigo-700 font-bold text-3xl'>No tienes cursos, agrega unos cuantos y regresa</h1>: 
       <h1 className='text-3xl font-bold text-center mt-10'>Tus cursos</h1>
       }
       <section className='grid grid-cols-4 text-black place-items-center p-10'>

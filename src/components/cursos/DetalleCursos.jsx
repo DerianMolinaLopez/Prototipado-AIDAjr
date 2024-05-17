@@ -1,4 +1,6 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useEffect,useState } from 'react'
 import axios from 'axios'
 import imagen from '../../img/fondo1.jpg'
@@ -6,24 +8,28 @@ import CardCurso from './CardCurso'
 const DetalleCursos = () => {
     const [detalleCurso, setDetalleCurso] = useState({})    
     const [instructor, setInstructor] = useState({})
+    const [Cursoid, setCursoid] = useState('')
+    const [idUsuario,setIdUsuario] = useState('')
     const [cursos,setCursos] = useState([])
 
     useEffect(()=>{
         const obtenerInformacionCurso = async () =>{  
             const curso = JSON.parse(localStorage.getItem('curso'))
             const response = await axios.get(`http://localhost:3000/cursos/curso/${curso.id}`)
+            setCursoid(curso.id)
             setDetalleCurso(response.data)
 
             const obtenerInstructor = async () =>{
                 const respon = await axios.get(`http://localhost:3000/instructor/detalle/${response.data.instructor}`)
                 setInstructor(respon.data)    
             }
-
+            setIdUsuario(JSON.parse(localStorage.getItem('usuario')).user._id)
+            //console.log(idUsuario)
             obtenerInstructor()
         }
         const obtenerTodosCursos = async () =>{
             const response = await axios.get('http://localhost:3000/cursos')
-            console.log(response.data)
+            
             setCursos(response.data)
         
         }
@@ -31,6 +37,18 @@ const DetalleCursos = () => {
         obtenerTodosCursos()
         obtenerInformacionCurso()
     },[])
+    const handleAgregarCurso = async e=>{
+        e.preventDefault()
+        const response =await axios.post('http://localhost:3000/cursos/curso/usuario',{
+            usuarioID:idUsuario,
+            CursoId:Cursoid
+        })
+        console.log(response.data)
+        if(response.data==='OK'){
+            toast.success('Curso agregado correctamente')
+        }
+
+    }
 
     return (
         <div className='flex px-56 bg-gray-300 p-4 gap-4'>
@@ -73,13 +91,17 @@ const DetalleCursos = () => {
                     Hola soy {instructor.nombre} y soy el instructor de este acompañame a
                     aprender y a afinar tus habilidades y mejorar tu perfil profesional
                 </p>
-                <button className='bg-blue-900 w-full text-center text-white p-2 mt-5 rounded-md'>
+                <button 
+                    onClick={e=>handleAgregarCurso(e)}
+                     className='bg-blue-900 w-full text-center text-white p-2 mt-5 rounded-md'>
                     Agregar Curso
                 </button>
                 </article>
                 
                 
             </section>
+            <ToastContainer autoClose={2000}
+            toastClassName={"custom-toast "}/>
         </div>
     )
 }
