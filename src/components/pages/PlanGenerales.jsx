@@ -21,7 +21,7 @@ const PlanGenerales = () => {
                 </section>
                 <section className='section02'>
                     <article className="cartaDescriptiva">
-                        <p className='letraPrincipal'>Plan de acceso mensual</p>
+                        <p className='letraPrincipal nito'>Plan de acceso mensual</p>
                         <hr />
                         <span className='descCompra'>
                             Bienvenido al Curso Mensual de AIDA JR!
@@ -29,8 +29,9 @@ const PlanGenerales = () => {
                             está diseñado para brindarte una inmersión profunda en herramientas de ofimatica como lo son Word, Powerpoint y Excel,
                             con un enfoque meticuloso en cada aspecto crucial para tu desarrollo.
                         </span>
+                        <img className='imgRobots' src="src/img/robots.png" alt="" />
                         <p></p>
-                        <span className=''>
+                        <span className='descProducto'>
                             No pierdas la oportunidad de aprovechar al máximo tus herramientas de Microsoft Office con la ayuda de AIDA JR.
                             ¡Inscríbete ahora y comienza tu viaje hacia la maestría en productividad hoy mismo!
                         </span>
