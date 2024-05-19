@@ -21,7 +21,7 @@ const PlanPrueba=()=>{
         </section>
         <section className='section02'>
             <article className="cartaDescriptiva">
-                <p className='letraPrincipal'>Plan de acceso mensual basico</p>
+                <p className='letraPrincipal nito'>Plan de acceso mensual basico</p>
                 <hr />
                 <span className='descCompra'>
                     ¡Mejora tus Habilidades en Word con AIDA JR!
@@ -29,8 +29,9 @@ const PlanPrueba=()=>{
                     programa gratuito de capacitación en Word con AIDA JR y descubre cómo sacarle el máximo provecho a esta poderosa herramienta de 
                     procesamiento de textos.
                 </span>
+                <img className='imgRobotPrueba' src="src/img/Robot-word-presentacion.png" alt="" />
                 <p></p>
-                <span className=''>
+                <span className='descProducto'>
                     No pierdas la oportunidad de aprovechar al máximo tus herramientas de Microsoft Office con la ayuda de AIDA JR.
                     ¡Inscríbete ahora y comienza tu viaje hacia la maestría en productividad hoy mismo!
                 </span>
