@@ -51,7 +51,7 @@ const MainCursos = () => {
                         agregarCurso = {agregarCurso}
   */
 
-    console.log('agregando curso')
+
   }
   return (
     <>
@@ -84,9 +84,10 @@ const MainCursos = () => {
                 
               
                     {cursosUsuario.map(curso=>{
+                    
                   return <CardCurso 
                                   tipo={'misCursos'}  
-                                  key={curso._id}
+                                   key={curso._id}
                                     titulo={curso.nombre}
                                     descripcion={curso.descripcion}
                                     imagen={curso.imagen}
@@ -97,7 +98,13 @@ const MainCursos = () => {
                 })}
                 
               
-                </>: <h3 className='text-3xl text-center mt-10'>No estas inscrito a ningun curso, explora mas opciones</h3>}
+                </>: 
+                <div className='flex justify-center flex-col    p-10'>
+                <h3 className='text-3xl text-start  mt-10 font-bold text-white'>No estas inscrito a ningun curso, explora mas opciones</h3>
+                <h3 className='text-3xl  mt-10 font-bold text-white'>Escoge algunos y regresa mas tarde</h3>
+                </div>
+                  
+                  }
                 </section>
 
             
@@ -109,19 +116,25 @@ const MainCursos = () => {
       {/*seccion para el apartado de excel */}
       <div className=''>
         <h3 className='auxiliar text-3xl font-bold text-center bg-verde-fuerte text-white p-10'>Automatiza tus tareas y registros con lo mejor en hojas de calculo</h3>
-       
+      
           <div className='absolute'>
  <section className='grid grid-cols-4 py-10 px-5 gap-5  relative bg-verde-excel place-items-center mx-20  top-10 rounded-lg'>
       
-        {excel.map(curso=><CardCurso 
+        {excel.map(curso=>
+        {
+          
+          return <CardCurso 
                               tipo={'exploracion'} 
+                              id={curso._id}
                               key={curso._id}
                               titulo={curso.nombre}
                               descripcion={curso.descripcion}
                               imagen={curso.imagen}
                               agregarCurso={agregarCurso}
                               instructor={curso.instructor}
-                              />)}
+                              />
+        }
+        )}
           </section>
           </div>
            
