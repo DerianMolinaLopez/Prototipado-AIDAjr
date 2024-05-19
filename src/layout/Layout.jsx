@@ -5,7 +5,7 @@ const Layout = () => {
   return (
     <>
     <HeaderCurso/>
-       <div className='fondo-cursos'>
+       <div className=''>
         <Outlet/>
        </div>
   </>

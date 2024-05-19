@@ -16,10 +16,13 @@ const DetalleCursos = () => {
         const obtenerInformacionCurso = async () =>{  
             const curso = JSON.parse(localStorage.getItem('curso'))
             const response = await axios.get(`http://localhost:3000/cursos/curso/${curso.id}`)
+            console.log('datos de la peticion')
+            console.log(response.data)
             setCursoid(curso.id)
             setDetalleCurso(response.data)
 
             const obtenerInstructor = async () =>{
+            
                 const respon = await axios.get(`http://localhost:3000/instructor/detalle/${response.data.instructor}`)
                 setInstructor(respon.data)    
             }
@@ -52,7 +55,7 @@ const DetalleCursos = () => {
 
     return (
         <>
-        <div className='flex px-56 bg-gray-300 p-4 gap-4 h-screen'>
+        <div className='flex px-56 bg-gray-300 p-4 gap-4 h-auto'>
             <section className='w-3/4'>
                 <div className='bg-green-900 shadow-lg anchura-banner-curso p-4 mt-10 text-white rounded-lg'>
                     <article className='m-5 space-y-5 '>
@@ -72,17 +75,17 @@ const DetalleCursos = () => {
                             Estos cursos se complementan bastante bien con este
                         </h3>
                         <article className='grid grid-cols-3 gap-5 mt-10'>
-                                {cursos.map(curso => (
-                                    <CardCurso   
-                                    tipoVista={'detalle'}
-                                        key={curso._id} 
-                                        titulo={curso.nombre} 
-                                        descripcion={curso.descripcion} 
-                                        imagen={curso.imagen} 
-                                        id={curso._id}
-                                    />
-                                ))}
-                            </article>
+    {cursos.slice(0, 3).map(curso => (
+        <CardCurso   
+        tipoVista={'detalle'}
+            key={curso._id} 
+            titulo={curso.nombre} 
+            descripcion={curso.descripcion} 
+            imagen={curso.imagen} 
+            id={curso._id}
+        />
+    ))}
+</article>
                             </article>
             </section>
             <section className='w-1/4 flex flex-col items-center  bg-white border-2 border-gray-400 rounded-lg'>
@@ -105,13 +108,7 @@ const DetalleCursos = () => {
             toastClassName={"custom-toast "}/>
            
         </div>
-            <footer className='border-t-4 border-gray-400'>
-                <div className='flex justify-around bg-gray-300'>
-                    <p>Kenyi cervantez</p>
-                    <p>Derian Molina Lopez</p>
-                    <p>Ramses</p>
-                </div>
-            </footer>
+           
         </>
         
     )

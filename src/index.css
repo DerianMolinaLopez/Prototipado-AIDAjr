@@ -23,6 +23,21 @@
 .fondo-amarillo-seccion{
   background-color: #FACC15;
 }
+.seccion-excel{
+  top:20rem;
+}
+.seccion-cursos-vistos{
+  max-width: 70%;
+}
+.auxiliar{
+  margin-top: 20rem;
+}
+.contenedor-excel{
+  background-color: rgb(2 52 48 / var(--tw-bg-opacity));
+  height: 25rem;
+  
+}
+
 /*
 globales para manejar el zoom de la pagina
 
@@ -64,6 +79,11 @@ html, body {
 .ancho-maximo{
   max-width: 52rem;
 }
+.contenedro-banner-curso{
+  display: flex;
+  justify-content: center;
+}
+
 .fondo{
   background-image: url('../src/img/robotsColores.jpg');
   height: 20rem;
