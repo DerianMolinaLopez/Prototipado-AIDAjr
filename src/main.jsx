@@ -15,6 +15,11 @@ import MisCursos from './components/cursos/MisCursos.jsx'
 import PresentacionHerramientas from './components/PresentacionHerramientas.jsx'
 import {createBrowserRouter,RouterProvider}  from 'react-router-dom'
 import Layout from './layout/Layout.jsx'
+import Perfil from './components/cursos/Perfil.jsx'
+import PlanEscuelas from './components/pages/PlanEscuelas.jsx'
+import PlanPrueba from './components/pages/PlanPrueba.jsx'
+import PlanGenerales from './components/pages/PlanGenerales.jsx'
+import '../src/cardNegocios.css'
 //el router para mandar todas las rutas
 import DetalleCursos from './components/cursos/DetalleCursos.jsx'
 const router  = createBrowserRouter([
@@ -74,7 +79,22 @@ const router  = createBrowserRouter([
     path: '/Login',
     element:<Login/>
   },
-
+  {
+    path: '/PlanGenerales',
+    element:<PlanGenerales/>
+  },
+  {
+    path: '/PlanGenerales',
+    element:<PlanPrueba/>
+  },
+  {
+    path: '/PlanGenerales',
+    element:<PlanEscuelas/>
+  },
+  {
+    path: '/Perfil',
+    element:<Perfil/>
+  }
 ])
 //? en este proyecto habra rutas y otras que si o si seran anidadas
 
