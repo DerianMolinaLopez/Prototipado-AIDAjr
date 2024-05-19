@@ -13,12 +13,12 @@ const ExploracionCursos = ({mensaje,agregarCurso,cursos, titulo}) => {
     //efecto para cargar ls datos de los cursos
   
   return (
-    <section>
-     
-        <h3 className='text-3xl text-center mt-10'>
+    <section className='px-10'>
+       <div className=' rounded-lg'>
+         <h3 className='text-3xl text-center mt-10'>
             {mensaje}
         </h3>
-        <div className='grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10'>
+        <div className='grid place-items-center px-5 py-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10'>
            {cursos.map((curso) =>(
            <CardCurso 
                       tipo={'exploracion'}
@@ -31,6 +31,8 @@ const ExploracionCursos = ({mensaje,agregarCurso,cursos, titulo}) => {
              />))}
             </div>
         
+       </div>
+       
     </section>
   )
 }

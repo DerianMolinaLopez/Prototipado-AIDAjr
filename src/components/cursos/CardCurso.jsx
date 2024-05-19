@@ -20,7 +20,7 @@ const CardCurso = ({titulo,descripcion,imagen,id,tipo,tipoVista}) => {
   }
    console.log(tipoVista)
   return (
-    <div className={`${tipoVista=='detalle'?'rounded-md bg-blue-900 p-2 ':'rounded-md shadow-lg p-5 border-2 space-y-5'} ` }>
+    <div className={`${tipoVista=='detalle'?'rounded-md bg-blue-900 p-2 ':'rounded-md shadow-lg p-5 border-2 space-y-5'} bg-white ` }>
         <picture> {/*Imagen demostrativa o de concepto */}
          <img src={imag} alt="Imagen del curso" />
         </picture>

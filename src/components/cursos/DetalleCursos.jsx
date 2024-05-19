@@ -51,7 +51,8 @@ const DetalleCursos = () => {
     }
 
     return (
-        <div className='flex px-56 bg-gray-300 p-4 gap-4'>
+        <>
+        <div className='flex px-56 bg-gray-300 p-4 gap-4 h-screen'>
             <section className='w-3/4'>
                 <div className='bg-green-900 shadow-lg anchura-banner-curso p-4 mt-10 text-white rounded-lg'>
                     <article className='m-5 space-y-5 '>
@@ -66,7 +67,7 @@ const DetalleCursos = () => {
                     </article>
                     
                 </div>
-                <article className='mt-10  rounded-lg text-gray-200'>
+                <article className='mt-10  rounded-lg  text-black'>
                         <h3 className='text-center font-semibold text-3xl text-black '>
                             Estos cursos se complementan bastante bien con este
                         </h3>
@@ -102,7 +103,17 @@ const DetalleCursos = () => {
             </section>
             <ToastContainer autoClose={2000}
             toastClassName={"custom-toast "}/>
+           
         </div>
+            <footer className='border-t-4 border-gray-400'>
+                <div className='flex justify-around bg-gray-300'>
+                    <p>Kenyi cervantez</p>
+                    <p>Derian Molina Lopez</p>
+                    <p>Ramses</p>
+                </div>
+            </footer>
+        </>
+        
     )
 }
 

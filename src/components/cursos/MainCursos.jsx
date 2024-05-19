@@ -48,7 +48,7 @@ const agregarCurso = (curso) =>{
   console.log('agregando curso')
 }
   return (
-    <div className='max-w-7xl mx-auto mt-5'>
+    <div className='max-w-7xl mx-auto pt-10  '>
       <section className='bg-gray-300 px-40 py-20'>
         <div className='bg-white shadow-lg p-4'>
             <article className='m-5 space-y-2'>
@@ -57,17 +57,17 @@ const agregarCurso = (curso) =>{
              </article>
         </div>
       </section>
-      <section >
-        {cursosUsuario.length>0? <h2 className='text-3xl text-center mt-10 font-bold'>Ultimos cursos que has visto</h2>: ''}
+      <section  className='fondo-azul-seccion rounded-lg fondo-cursos'>
+        {cursosUsuario.length>0? <h2 className='text-white text-4xl text-center mt-10 font-bold'>Ultimos cursos que has visto</h2>: ''}
    
-        <div className={`${cursosUsuario.length>0? "grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 mt-10":
+        <section className={`${cursosUsuario.length>0? "grid place-items-center  lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 p-10 rounded-lg mt-10":
           ''
         } `}>
             {cursosUsuario.length > 0 ? <>
      
         
-            
-        {cursosUsuario.map(curso=>{
+       
+             {cursosUsuario.map(curso=>{
           return <CardCurso 
                            tipo={'misCursos'}  
                            key={curso._id}
@@ -79,16 +79,24 @@ const agregarCurso = (curso) =>{
                             />
         
         })}
+         
+       
         </>: <h3 className='text-3xl text-center mt-10'>No estas inscrito a ningun curso, explora mas opciones</h3>}
-        </div>
+        </section>
 
       </section>
-      <h2 className='text-center text-2xl my-9'>Cursos que te pueden interesar</h2>
-      <ExploracionCursos 
+      <section className='text-black mt-20 rounded-lg '>
+              <h2 className='ml-10 pt-5 font-bold text-4xl text-center '>Cursos que te pueden interesar</h2>
+    
+            <ExploracionCursos 
                          cursos={cursos}
                          mensaje={mensaje}
                          agregarCurso={agregarCurso}/>
+     
+  
       
+      </section>
+
     </div>
   )
 }

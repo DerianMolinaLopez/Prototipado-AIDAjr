@@ -2,8 +2,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root{
+  --colorFondoAzul : #001C72;
+}
+/* 
+  Estilos para el fondo de la pagina
+  principal de los cursos
+
+*/
+.fondo-cursos {
+
+  background-color:#000E37;
+}
+.fondo-azul-seccion{
+  background-color:#1E3A8A;
+}
 .fondo-redondeado{
     border-radius: 10px 5px 0px 40px;
+}
+.fondo-amarillo-seccion{
+  background-color: #FACC15;
 }
 /*
 globales para manejar el zoom de la pagina
