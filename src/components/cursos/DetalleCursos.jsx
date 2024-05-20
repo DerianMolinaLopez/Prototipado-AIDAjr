@@ -20,6 +20,7 @@ const DetalleCursos = () => {
           console.error('No course found in localStorage');
           return;
         }
+        console.log(curso)
         
         const response = await axios.get(`http://localhost:3000/cursos/curso/${curso.id}`);
         setCursoid(curso.id);
@@ -74,15 +75,15 @@ const DetalleCursos = () => {
         <section className='w-3/4'>
           <div className='bg-green-900 shadow-lg anchura-banner-curso p-4 mt-10 text-white rounded-lg'>
             <article className='m-5 space-y-5 '>
-              <h2 className='text-4xl font-semibold'>{detalleCurso.nombre}</h2>
-              <h3 className='uppercase text-2xl'>
-                Instructor: {' '}
-                <span className='font-lg'>
-                  {instructor.nombre}
-                </span>
-              </h3>
-              <p className='text-2xl'>{detalleCurso.descripcion}</p>
-            </article>
+  <h2 className='text-4xl font-semibold'>{detalleCurso ? detalleCurso.nombre : ''}</h2>
+  <h3 className='uppercase text-2xl'>
+    Instructor: {' '}
+    <span className='font-lg'>
+      {instructor ? instructor.nombre : ''}
+    </span>
+  </h3>
+  <p className='text-2xl'>{detalleCurso ? detalleCurso.descripcion : 'Borbon'}</p>
+</article>
           </div>
           <article className='mt-10 rounded-lg text-black'>
             <h3 className='text-center font-semibold text-3xl text-black '>
@@ -105,16 +106,16 @@ const DetalleCursos = () => {
         <section className='w-1/4 flex flex-col items-center bg-white border-2 border-gray-400 rounded-lg'>
           <img src={imagen} alt="imagen-prueba" />
           <article className='px-2'>
-            <p>
-              Hola soy {instructor.nombre} y soy el instructor de este curso. Acompáñame a
-              aprender y a afinar tus habilidades y mejorar tu perfil profesional.
-            </p>
-            <button
-              onClick={handleAgregarCurso}
-              className='bg-blue-900 w-full text-center text-white p-2 mt-5 rounded-md'>
-              Agregar Curso
-            </button>
-          </article>
+  <p>
+    Hola soy {instructor ? instructor.nombre : 'Borbon'} y soy el instructor de este curso. Acompáñame a
+    aprender y a afinar tus habilidades y mejorar tu perfil profesional.
+  </p>
+  <button
+    onClick={handleAgregarCurso}
+    className='bg-blue-900 w-full text-center text-white p-2 mt-5 rounded-md'>
+    Agregar Curso
+  </button>
+</article>
         </section>
         <ToastContainer autoClose={2000} toastClassName={"custom-toast"} />
       </div>

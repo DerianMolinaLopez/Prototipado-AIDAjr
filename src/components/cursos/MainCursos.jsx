@@ -6,6 +6,7 @@ import ExploracionCursos from './ExploracionCursos'
 const MainCursos = () => {
   const [cursosUsuario, setCursosUsuario] = useState([{}])
   const [cursos, setCursos] = useState([])
+  const [power,setPower] = useState([{}]) 
   const [excel,setExcel] = useState([{}])
   const [mensaje, setMensaje] = useState('')
   useEffect(() => {
@@ -25,9 +26,14 @@ const MainCursos = () => {
       
       setExcel(response.data)
     }
+    const obtenerPower = async()=>{
+      const response = await axios.get('http://localhost:3000/cursos/tipos/power')
+      setPower(response.data)
+    }
     obtenerCursosUsuario()
     obtenerCursos()
     obtenerExcel()
+    obtenerPower()
   }, [])
 
   useEffect(() => {
@@ -147,31 +153,26 @@ const MainCursos = () => {
      
       </div>
       <div className=''>
-        <h3 className='auxiliar text-3xl font-bold text-center bg-naranja  text-white p-10'>Automatiza tus tareas y registros con lo mejor en hojas de calculo</h3>
+  <h3 className='auxiliar text-3xl font-bold text-center bg-naranja  text-white p-10'>Agrega aspecto visual a tus presentaciones</h3>
+   
+  <div className='absolute'>
+    <section className='grid grid-cols-4 py-10 px-5 gap-5  relative bg-naranja-amarillado place-items-center mx-20  top-10 rounded-lg'>
+      {power.map(curso=><CardCurso 
+                          tipo={'exploracion'} 
+                          id={curso._id}
+                          key={curso._id}
+                          titulo={curso.nombre}
+                          descripcion={curso.descripcion}
+                          imagen={curso.imagen}
+                          agregarCurso={agregarCurso}
+                          instructor={curso.instructor}
+                          />)}
+    </section>
+  </div>
        
-          <div className='absolute'>
- <section className='grid grid-cols-4 py-10 px-5 gap-5  relative bg-naranja-amarillado place-items-center mx-20  top-10 rounded-lg'>
-      
-        {excel.map(curso=><CardCurso 
-                              tipo={'exploracion'} 
-                              key={curso._id}
-                              titulo={curso.nombre}
-                              descripcion={curso.descripcion}
-                              imagen={curso.imagen}
-                              agregarCurso={agregarCurso}
-                              instructor={curso.instructor}
-                              />)}
-          </section>
-          </div>
-           
-          <div className='bg-naranja h-96 mt-48'>
-
-          </div>
-     
-        
-      
-     
-      </div>
+  <div className='bg-naranja h-96 mt-48'>
+  </div>
+</div>
       
      
 

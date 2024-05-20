@@ -6,9 +6,6 @@ import imag from '../../img/fondo2.jpg';
 const CardCurso = ({ titulo, descripcion, imagen, id, tipo, tipoVista }) => {
   const navigate = useNavigate();
 
-  const handleVerMas = () => {
-    console.log('Ver mas', id);
-  };
 
   const handleChangePage = (e) => {
     e.preventDefault();
@@ -22,7 +19,7 @@ const CardCurso = ({ titulo, descripcion, imagen, id, tipo, tipoVista }) => {
 
   return (
     <div className={`${tipoVista === 'detalle' ? 'rounded-md bg-blue-900 p-2' : 'rounded-md shadow-lg p-5 border-2 space-y-5'} bg-white`}>
-      <picture> {/* Imagen demostrativa o de concepto */}
+      <picture className='flex justify-center'> {/* Imagen demostrativa o de concepto */}
         <img src={imag} alt="Imagen del curso" />
       </picture>
       <h3 className="font-bold text-lg">{titulo}</h3>
