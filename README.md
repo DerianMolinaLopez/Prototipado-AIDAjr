@@ -8,7 +8,7 @@
 ## Requisitos previos para la instalcion del proyeto
 - Tener git instalado y configurado con tus cuentas y nombre de usuario
 - Si se puede teenr vs code pero con un IDE u otro editor no debe haber problema
-- Tener instalaco nodejs, este proyecto esta usando  la version 20.10.0 (Por si hay algun problema con dependencias pero lo dudo mucho
+- Tener instalaco nodejs, este proyecto esta usando  la version 20.10.0 (Por si hay algun problema con dependencias pero lo dudo mucho)
 
 # Pasos de instalacion
 Instalacion: El proyecot mismo tiene un packege.json, centro tiene un comando de instalacion
