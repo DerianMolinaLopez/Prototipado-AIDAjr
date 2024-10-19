@@ -15,7 +15,7 @@ const Planes = () => {
         <p className='text-white'>
         Descubre con AIDA JR el Aprendizaje de Office puede transformar tu experiencia con Word, PowerPoint y Excel. Desde la creación de documentos profesionales y presentaciones impactantes hasta el manejo eficiente de datos y análisis en Excel, nuestra plataforma te proporciona las herramientas y conocimientos necesarios para tener éxito en el mundo digital de hoy.
         </p>
-            <a href="" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
+            <a href="/PlanGenerales" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
@@ -31,7 +31,7 @@ const Planes = () => {
         <p className='text-white'>
         Ofrecemos una variedad de planes educativos para satisfacer tus necesidades de aprendizaje. Desde estudiantes hasta profesionales, nuestros planes están diseñados para adaptarse a diferentes niveles de habilidad y objetivos. Para el desarrollo de manera temprana a este ámbito de herramientas y asi expandir tu conjunto de habilidades, tenemos un plan educativo para ti.
         </p>
-        <a href="" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
+        <a href="/PlanEscuelas" className='w-full font-black text-white flex justify-center' >Ver planes de pago {'    '}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>
@@ -48,7 +48,7 @@ const Planes = () => {
         <p className='text-white'>
         ¿Listo para mejorar tus habilidades en Office? ¡Únete a nuestra comunidad hoy mismo y obtén acceso a una prueba gratuita de AIDA JR Experimenta la potencia de la inteligencia artificial mientras exploras las numerosas funciones y lecciones diseñadas para hacerte un experto en Word, PowerPoint y Excel.
         </p>
-        <a href="" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
+        <a href="/PlanPrueba" className='w-full font-black text-white flex justify-center'>Ver planes de pago {'    '}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
             </svg>

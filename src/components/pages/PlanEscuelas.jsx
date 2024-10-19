@@ -21,7 +21,7 @@ const PlanEscuelas=()=>{
                 </section>
                 <section className='section02'>
                     <article className="cartaDescriptiva">
-                        <p className='letraPrincipal'>Plan de acceso escolar</p>
+                        <p className='letraPrincipal nito'>Plan de acceso escolar</p>
                         <hr />
                         <span className='descCompra'>
                         ¡Transforma la Educación con AIDA JR para Escuelas!
@@ -30,8 +30,9 @@ const PlanEscuelas=()=>{
                         a estudiantes y profesores una suite de herramientas poderosas para mejorar el rendimiento académico y simplificar 
                         las tareas administrativas.
                         </span>
+                        <img className='imgRobots' src="src/img/robots.png" alt="" />
                         <p></p>
-                        <span className=''>
+                        <span className='descProductos'>
                         ¡Únete a la revolución educativa con AIDA JR para Escuelas y lleva el aprendizaje y la productividad al siguiente
                         nivel!
                         </span>

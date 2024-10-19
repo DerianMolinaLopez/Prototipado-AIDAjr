@@ -69,18 +69,31 @@
 
 .cartaDescriptiva{
     background-color: white;
-    height: 300px;
-    margin-top: 130px;
-    border-radius: 20px; /* Puedes ajustar el valor según tu preferencia */
-    overflow: hidden; /* Asegura que el contenido dentro del article no sobresalga de las esquinas curvadas */
-        /* Otros estilos según sea necesario */
+    height: 500px;
+    margin-top: 69px;
+    /* border-radius: 20px; 
+    overflow: hidden;  */
     font-family: 'Helvetica';
+    background-color: #4a61a7;
+    color: white;
+    margin-left: -110px;
+    margin-right: 17px;
+    text-align: center;
+}
+.imgRobots{
+    height: 300px;
+    margin-left: 100px;
+}
+.imgRobotPrueba{
+    height: 400px;
+    margin-left: 210px;
+    margin-top: -50px;
 }
 
 .descCompra{
-    font-size: 1em;
-    margin-left: 20px;
-    margin-right: 20px;
-    
+    font-size: 1.3em;
+}
+.descProducto{
+    font-size: 0.9em;
 }
 

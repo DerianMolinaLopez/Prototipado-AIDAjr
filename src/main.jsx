@@ -84,12 +84,12 @@ const router  = createBrowserRouter([
     element:<PlanGenerales/>
   },
   {
-    path: '/PlanGenerales',
-    element:<PlanPrueba/>
+    path: '/PlanEscuelas',
+    element:<PlanEscuelas/>
   },
   {
-    path: '/PlanGenerales',
-    element:<PlanEscuelas/>
+    path: '/PlanPrueba',
+    element:<PlanPrueba/>
   },
   {
     path: '/Perfil',
